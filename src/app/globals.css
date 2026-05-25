@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #080818;
+}
+
+@keyframes glitch {
+  0%, 100% { clip-path: inset(0 0 98% 0); transform: translate(-2px, 0); }
+  20%       { clip-path: inset(30% 0 50% 0); transform: translate(2px, 0); }
+  40%       { clip-path: inset(60% 0 20% 0); transform: translate(-1px, 0); }
+  60%       { clip-path: inset(80% 0 5% 0);  transform: translate(1px, 0); }
+  80%       { clip-path: inset(10% 0 70% 0); transform: translate(-2px, 0); }
+}
+
+.glitch-text {
+  position: relative;
+}
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  animation: glitch 3s infinite;
+}
+.glitch-text::before { color: #6366f1; animation-delay: 0s; }
+.glitch-text::after  { color: #f59e0b; animation-delay: 0.15s; }
+
+.scan-line {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(99,102,241,0.03) 2px,
+    rgba(99,102,241,0.03) 4px
+  );
+  pointer-events: none;
+}
