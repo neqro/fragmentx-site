@@ -58,7 +58,7 @@ export default function Home() {
           </p>
           <div className="mt-4 flex gap-4">
             <a href={`https://etherscan.io/address/${process.env.NEXT_PUBLIC_CONTRACT_ADDRESS}`} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-xs">Contract ↗</a>
-            <a href="https://opensea.io" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-xs">OpenSea ↗</a>
+            <a href="https://opensea.io/collection/fragmentx" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline text-xs">OpenSea ↗</a>
           </div>
         </div>
 
