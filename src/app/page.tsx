@@ -21,8 +21,8 @@ export default function Home() {
           {[
             { label: "Supply",  value: "10,000" },
             { label: "Price",   value: "0.00015 ETH" },
-            { label: "Royalty", value: "10%" },
-            { label: "Wallet",  value: "1 max" },
+            { label: "Royalty", value: "5%" },
+            { label: "Wallet",  value: "5 max" },
           ].map((s) => (
             <div key={s.label}>
               <p className="text-white font-bold text-lg sm:text-2xl">{s.value}</p>

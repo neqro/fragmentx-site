@@ -46,7 +46,7 @@ export function MintButton() {
 
   const supply = totalSupply ? Number(totalSupply) : 0;
   const pct    = Math.round((supply / 10000) * 100);
-  const hasMinted = alreadyMinted && Number(alreadyMinted) >= 1;
+  const hasMinted = alreadyMinted && Number(alreadyMinted) >= 5;
   const price  = mintPrice ? formatEther(mintPrice) : "0.00015";
 
   async function handleMint() {
@@ -100,7 +100,7 @@ export function MintButton() {
         <div className="w-full flex flex-col gap-3">
           {hasMinted ? (
             <div className="w-full text-center py-4 rounded-xl border border-border text-gray-400 text-sm">
-              Already minted — 1 per wallet
+              Already minted — 5 per wallet max
             </div>
           ) : !mintOpen ? (
             <div className="w-full text-center py-4 rounded-xl border border-border text-gray-400 text-sm">
