@@ -10,7 +10,7 @@ export const config = getDefaultConfig({
   ssr: true,
 });
 
-export const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS as `0x${string}`;
+export const CONTRACT_ADDRESS = "0x48aa484775f0beD6f78737578e855918Aa788cBE" as `0x${string}`;
 
 export const CONTRACT_ABI = [
   {
